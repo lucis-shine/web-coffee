@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,18 +8,7 @@
 </head>
 <body>
 <div id="container">
-  <div id="top"></div>
-  <div id="search">
-      <div class="navSearchDiv">
-          <input type="text" value="请输入搜索内容">
-          <img src="" alt="">
-      </div>
-      <ul class="userLoginDiv">
-        <li><a href="">登录</a></li>
-        <li>/</li>
-        <li><a href="">注册</a></li>
-      </ul>
-  </div>
+    <jsp:include page="/common/before/header.jsp"></jsp:include>
   <div id="menu">
       <ul class="menuUl">
           <li><a href="">首页</a></li>
@@ -95,6 +85,7 @@
 
     </div>
   </div>
+    <jsp:include page="/common/before/footer.jsp"></jsp:include>
 </div>
 </body>
 </html>

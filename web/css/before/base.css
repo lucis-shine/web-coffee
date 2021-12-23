@@ -8,11 +8,14 @@ body,ul{
 }
 #container #top{
     height: 37px;
+    width: 100%;
     background-color: #435764;
     position: relative;
+
 }
 #container #search{
     height: 80px;
+    width: 100%;
     background-color: #f1f3f2;
     position: relative;
     overflow: hidden;
@@ -60,6 +63,7 @@ body,ul{
 }
 #container #menu{
     height: 40px;
+    width: 100%;
     background-color: #ffe138;
     position: relative;
 }
@@ -82,7 +86,9 @@ body,ul{
 }
 #container #show{
     height: 300px;
+    width: auto;
     background-color: #4e3322;
+
     position: relative;
 }
 #container #show img{
@@ -90,9 +96,8 @@ body,ul{
     width: 100%;
 }
 #container #content{
-    width: auto;
+    width: 100%;
     position: relative;
-
 }
 #container #content h3{
     text-align: center;
@@ -104,13 +109,11 @@ body,ul{
 }
 #container #content #goodsDiv{
     width: 68%;
-    height: 300px;
     float: left;
 }
-#container #content #goodsList{
+#container #content  #goodsDiv #goodsList{
     width: 100%;
     background-color: white;
-    height: 300px;
 }
 #container #content #goodsList .goods{
     width: 24%;
@@ -153,5 +156,14 @@ body,ul{
 #container #content #news .newsContent .title a{
     text-decoration: none;
     color: #5f5a51;
-
+}
+#container #footer{
+    height: 37px;
+    width: 100%;
+    float: left;
+    background-color: pink;
+    line-height: 37px;
+    text-align: center;
+    color: #333;
+    position: relative;
 }
