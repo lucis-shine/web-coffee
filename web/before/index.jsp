@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="jstl-c" uri="http://java.sun.com/jstl/core_rt" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,44 +16,41 @@
   <div id="menu">
       <ul class="menuUl">
           <li><a href="">首页</a></li>
-          <li><a href="">白咖啡</a></li>
-          <li><a href="">速溶咖啡</a></li>
-          <li><a href="">黑咖啡</a></li>
-          <li><a href="">挂耳咖啡</a></li>
-          <li><a href="">猫屎咖啡</a></li>
-          <li><a href="">意式咖啡</a></li>
+          <jstl-c:forEach items="${coffeeTypeList}" var="type">
+              <li><a href="">${type.name}</a></li>
+          </jstl-c:forEach>>
           <li><a href="">咖啡咨询</a></li>
       </ul>
   </div>
   <div id="show">
-      <img src="" alt="">
+      <img src="${pageContext.request.contextPath}/" alt="">
   </div>
   <div id="content">
     <div id="goodsDiv">
         <h3>本周推荐</h3>
         <div id="goodsList">
             <div class="goods">
-                <img src="" alt="">
+                <img src="${pageContext.request.contextPath}/" alt="">
                 <span class="goodsName">描述</span>
                 <span class="goodsPrice">单价</span>
             </div>
             <div class="goods">
-                <img src="" alt="">
+                <img src="${pageContext.request.contextPath}/" alt="">
                 <span class="goodsName">描述</span>
                 <span class="goodsPrice">单价</span>
             </div>
             <div class="goods">
-                <img src="" alt="">
+                <img src="${pageContext.request.contextPath}/" alt="">
                 <span class="goodsName">描述</span>
                 <span class="goodsPrice">单价</span>
             </div>
             <div class="goods">
-                <img src="" alt="">
+                <img src="${pageContext.request.contextPath}/" alt="">
                 <span class="goodsName">描述</span>
                 <span class="goodsPrice">单价</span>
             </div>
             <div class="goods">
-                <img src="" alt="">
+                <img src="${pageContext.request.contextPath}/" alt="">
                 <span class="goodsName">描述</span>
                 <span class="goodsPrice">单价</span>
             </div>
