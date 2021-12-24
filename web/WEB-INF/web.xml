@@ -3,17 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <!--<servlet>
-        <servlet-name>log4jinit</servlet-name>
+    <servlet>
+        <servlet-name>log4j-init</servlet-name>
         <servlet-class>utils.Log4jInit</servlet-class>
         <init-param>
-            &lt;!&ndash;配置文件在WEB-INF根目录下&ndash;&gt;
+            <!--配置文件在WEB-INF根目录下-->
             <param-name>log4j-init-file</param-name>
             <param-value>/WEB-INF/log42j.properties</param-value>
-            &lt;!&ndash; src下的config包下 &ndash;&gt;
-            &lt;!&ndash;<param-value>WEB-INF/classes/config/log4j.properties</param-value>
-           &ndash;&gt;
+            <!-- src下的config包下 -->
+            <!--<param-value>WEB-INF/classes/config/log4j.properties</param-value>
+           -->
         </init-param>
         <load-on-startup>1</load-on-startup>
-    </servlet>-->
+    </servlet>
 </web-app>

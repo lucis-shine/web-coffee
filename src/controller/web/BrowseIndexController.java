@@ -1,16 +1,14 @@
 package controller.web;
 
 import VO.web.CoffeeTypeVO;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import service.web.CoffeeTypeMangerService;
-import service.web.ICoffeeTypeMangerService;
-import service.web.IUserMangerService;
-import service.web.UserMangerService;
+import VO.web.CoffeeVO;
+import service.web.*;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
@@ -18,6 +16,7 @@ import java.util.List;
 @WebServlet("/browseIndex")
 public class BrowseIndexController extends HttpServlet {
     ICoffeeTypeMangerService coffeeTypeMangerService=new CoffeeTypeMangerService();
+    ICoffeeMangerService coffeeMangerService=new CoffeeMangerService();
     String method="";//调用方法名称
     IUserMangerService userMangerService=new UserMangerService();
     @Override
@@ -42,7 +41,11 @@ public class BrowseIndexController extends HttpServlet {
     }
     //获得咖啡基本信息
     public void getCoffeeList(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        List<CoffeeVO> coffeeList= coffeeMangerService.getCoffeeList();
+        //绑定咖啡类型数据
+        req.setAttribute("coffeeTypeList",coffeeList);
+        //跳转页面
+        req.getRequestDispatcher("/before/index.jsp").forward(req,resp);
     }
     //获得咖啡新闻信息
     public void getCoffeeNewList(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
