@@ -28,4 +28,12 @@ public class CoffeeTypePOJO {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "CoffeeTypePOJO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

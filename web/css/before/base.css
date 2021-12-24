@@ -10,6 +10,7 @@ body,ul{
     height: 37px;
     width: 100%;
     background-color: #435764;
+    float: left;
     position: relative;
 
 }
@@ -17,6 +18,7 @@ body,ul{
     height: 80px;
     width: 100%;
     background-color: #f1f3f2;
+    float: left;
     position: relative;
     overflow: hidden;
 }
@@ -66,6 +68,7 @@ body,ul{
     height: 40px;
     width: 100%;
     background-color: #ffe138;
+    float: left;
     position: relative;
 }
 #container #menu .menuUl{
@@ -87,9 +90,9 @@ body,ul{
 }
 #container #show{
     height: 300px;
-    width: auto;
+    width: 100%;
+    float: left;
     background-color: #4e3322;
-
     position: relative;
 }
 #container #show img{
@@ -98,6 +101,7 @@ body,ul{
 }
 #container #content{
     width: 100%;
+    float: left;
     position: relative;
 }
 #container #content h3{
@@ -158,6 +162,12 @@ body,ul{
 #container #content #news .newsContent .title a{
     text-decoration: none;
     color: #5f5a51;
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    text-overflow: ellipsis;/*文字显示。。。，另一个截断不显示。。。。。*/
+    white-space: nowrap;/*文字不换行*/
+    overflow: hidden;/*超出隐藏*/
 }
 #container #footer{
     height: 37px;

@@ -9,4 +9,6 @@ public class CoffeeTypeVO extends CoffeeTypePOJO {
     public CoffeeTypeVO(Integer id, String name) {
         super(id, name);
     }
+
+
 }

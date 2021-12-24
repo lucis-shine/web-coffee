@@ -16,9 +16,9 @@ public class CoffeeTypeDao implements ICoffeeTypeDao{
         Connection conn= DataSourceUtil.getConnection();
         PreparedStatement preparedStatement=null;
         try{
-          String sql="select Id ,name,from coffeetype";
+          String sql="select id ,name from coffeetype";
           preparedStatement=conn.prepareStatement(sql);
-         ResultSet set= preparedStatement.executeQuery();
+          ResultSet set= preparedStatement.executeQuery();
          while(set.next()){
              CoffeeTypeVO vo=new CoffeeTypeVO(set.getInt("Id"), set.getString("name"));
              coffeeTypeList.add(vo);
