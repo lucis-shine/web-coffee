@@ -15,7 +15,7 @@
 <div id="search">
     <div class="navSearchDiv">
         <input type="text" value="请输入搜索内容">
-        <img src="" alt="">
+        <img src="${pageContext.request.contextPath}/image/before/searchLogo.png" alt="">
     </div>
     <ul class="userLoginDiv">
         <li><a href="">登录</a></li>

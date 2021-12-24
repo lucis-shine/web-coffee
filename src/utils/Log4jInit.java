@@ -14,7 +14,7 @@ public class Log4jInit extends HttpServlet {
         String prefix = getServletContext().getRealPath("/");
         String file = getInitParameter("log4j-init-file");
         System.out.println("----------对参数进行处理------------");
-        System.out.println(file+file);
+        System.out.println(prefix+file);
         PropertyConfigurator.configure(prefix+file);
 
     }

@@ -18,71 +18,39 @@
           <li><a href="">首页</a></li>
           <jstl-c:forEach items="${coffeeTypeList}" var="type">
               <li><a href="">${type.name}</a></li>
-          </jstl-c:forEach>>
+          </jstl-c:forEach>
           <li><a href="">咖啡咨询</a></li>
       </ul>
   </div>
   <div id="show">
-      <img src="${pageContext.request.contextPath}/" alt="">
+      <img src="${pageContext.request.contextPath}/image/before/header-desktop.jpg" alt="">
   </div>
   <div id="content">
     <div id="goodsDiv">
         <h3>本周推荐</h3>
         <div id="goodsList">
-            <div class="goods">
-                <img src="${pageContext.request.contextPath}/" alt="">
-                <span class="goodsName">描述</span>
-                <span class="goodsPrice">单价</span>
-            </div>
-            <div class="goods">
-                <img src="${pageContext.request.contextPath}/" alt="">
-                <span class="goodsName">描述</span>
-                <span class="goodsPrice">单价</span>
-            </div>
-            <div class="goods">
-                <img src="${pageContext.request.contextPath}/" alt="">
-                <span class="goodsName">描述</span>
-                <span class="goodsPrice">单价</span>
-            </div>
-            <div class="goods">
-                <img src="${pageContext.request.contextPath}/" alt="">
-                <span class="goodsName">描述</span>
-                <span class="goodsPrice">单价</span>
-            </div>
-            <div class="goods">
-                <img src="${pageContext.request.contextPath}/" alt="">
-                <span class="goodsName">描述</span>
-                <span class="goodsPrice">单价</span>
-            </div>
+            <jstl-c:forEach items="${coffeeList}" var="coffee">
+                <div class="goods">
+                    <img src="${pageContext.request.contextPath}/image/before/${coffee.picture}" alt="">
+                    <span class="goodsName">${coffee.name}</span>
+                    <span class="goodsPrice">${coffee.price}</span>
+                </div>
+            </jstl-c:forEach>
         </div>
 
     </div>
     <div id="news">
         <h3>新闻咨询</h3>
         <div class="newsContent">
-        <div class="title">
-            <a href="">标题</a>
-        </div>
-            <div class="time">
-            时间
-            </div>
-        </div>
-        <div class="newsContent">
-            <div class="title">
-                <a href="">标题</a>
-            </div>
-            <div class="time">
-                时间
-            </div>
-        </div>
-        <div class="newsContent">
-            <div class="title">
-                <a href="">标题</a>
-            </div>
-            <div class="time">
-                时间
-            </div>
-        </div>
+            <jstl-c:forEach items="${coffeeNewsList}" var="news">
+                <div class="title">
+                    <a href="">${news.title}</a>
+                </div>
+                <div class="time">
+                        ${news.addtime}
+                </div>
+            </jstl-c:forEach>
+
 
     </div>
   </div>

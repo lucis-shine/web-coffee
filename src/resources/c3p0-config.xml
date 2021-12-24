@@ -4,7 +4,7 @@
     <default-config>
         <property name="user">root</property>
         <property name="password">zc010106@</property>
-        <property name="jdbcUrl">jdbc:mysql://localhost:3306/eshop_coffee?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/eshop_coffee?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=UTF-8</property>
         <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
         <property name="checkoutTimeout">30000</property>
         <property name="idleConnectionTestPeriod">30</property>

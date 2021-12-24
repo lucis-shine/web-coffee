@@ -127,4 +127,22 @@ public class CoffeePOJO {
     public void setDetail(String detail) {
         this.detail = detail;
     }
+
+    @Override
+    public String toString() {
+        return "CoffeePOJO{" +
+                "id=" + id +
+                ", picture='" + picture + '\'' +
+                ", name='" + name + '\'' +
+                ", coffeetypeid=" + coffeetypeid +
+                ", price=" + price +
+                ", num=" + num +
+                ", netweight='" + netweight + '\'' +
+                ", qualittydate='" + qualittydate + '\'' +
+                ", tasteid=" + tasteid +
+                ", brand='" + brand + '\'' +
+                ", storage='" + storage + '\'' +
+                ", detail='" + detail + '\'' +
+                '}';
+    }
 }
