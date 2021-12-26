@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"  %>
 <%@taglib prefix="jstl-c" uri="http://java.sun.com/jstl/core_rt" %>
 <html lang="en">
 <head>
@@ -23,8 +23,8 @@
       </ul>
   </div>
   <div id="show">
-      <img src="${pageContext.request.contextPath}/image/before/header-desktop.jpg" alt="">
-  </div>
+        <img src="${pageContext.request.contextPath}/image/before/header-desktop.jpg" alt="">
+    </div>
   <div id="content">
     <div id="goodsDiv">
         <h3>本周推荐</h3>

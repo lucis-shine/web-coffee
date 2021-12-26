@@ -17,7 +17,7 @@ public class CoffeeNewsDao implements ICoffeeNewsDao{
         Connection conn= DataSourceUtil.getConnection();
         PreparedStatement preparedStatement=null;
         try{
-            String sql="select id,picture,title,content,data_format(addtime,'%Y-%m-%d') addtime,isDelete from coffeenews";
+            String sql="select id,picture,title,content,DATE_FORMAT(addtime,'%Y-%m-%d') addtime,isDelete from coffeenews";
             preparedStatement=conn.prepareStatement(sql);
             ResultSet set= preparedStatement.executeQuery();
             while(set.next()){

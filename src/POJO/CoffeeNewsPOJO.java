@@ -67,4 +67,16 @@ public class CoffeeNewsPOJO {
     public void setIsDelete(String isDelete) {
         this.isDelete = isDelete;
     }
+
+    @Override
+    public String toString() {
+        return "CoffeeNewsPOJO{" +
+                "id=" + id +
+                ", picture='" + picture + '\'' +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", addtime='" + addtime + '\'' +
+                ", isDelete='" + isDelete + '\'' +
+                '}';
+    }
 }

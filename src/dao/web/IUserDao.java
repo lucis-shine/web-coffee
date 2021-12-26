@@ -1,5 +1,6 @@
 package dao.web;
 
+import POJO.UserPOJO;
 import VO.web.UserLoginVO;
 
 public interface IUserDao {
@@ -7,4 +8,6 @@ public interface IUserDao {
     UserLoginVO selectUserInfoByUserNameAndPassword(String username, String password);
     //修改密码
     boolean updatePassword(Integer userId, String newPassword);
+    //会员注册
+    boolean insert(UserPOJO userPOJO);
 }

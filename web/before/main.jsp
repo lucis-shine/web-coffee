@@ -1,3 +1,3 @@
 <script>
-    location.href="/web-coffee/before/browseIndex?m=index";
+    location.href="browseIndex?m=index";
 </script>

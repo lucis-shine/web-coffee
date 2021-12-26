@@ -18,9 +18,9 @@
         <img src="${pageContext.request.contextPath}/image/before/searchLogo.png" alt="">
     </div>
     <ul class="userLoginDiv">
-        <li><a href="">登录</a></li>
+        <li><a href="${pageContext.request.contextPath}/before/user/login.jsp">登录</a></li>
         <li>/</li>
-        <li><a href="">注册</a></li>
+        <li><a href="${pageContext.request.contextPath}/before/user/register.jsp">注册</a></li>
     </ul>
 </div>
 </body>

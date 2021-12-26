@@ -12,7 +12,8 @@ public class EncodingFilter implements Filter {
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("-----------编码过滤----------");
         encode= filterConfig.getInitParameter("encode");
-        System.out.println(encode);
+        System.out.println("-----------默认字符集"+encode+"----------");
+
     }
 
     @Override
@@ -27,6 +28,6 @@ public class EncodingFilter implements Filter {
 
     @Override
     public void destroy() {
-        System.out.println("-------编码过滤完成------");
+        System.out.println("-------设置默认编码完成------");
     }
 }
