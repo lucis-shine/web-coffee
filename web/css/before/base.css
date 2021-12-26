@@ -20,7 +20,6 @@ body,ul{
     background-color: #f1f3f2;
     float: left;
     position: relative;
-    overflow: hidden;
 }
 #container #search .navSearchDiv{
     width: 233px;
@@ -50,7 +49,22 @@ body,ul{
     float: right;
     height: 80px;
     list-style: none;
+    margin-right: 30px;
 }
+#container #search .userLoginDiv .dropdown #dropdownMenuUl {
+    margin-left: -50px;
+    margin-top: -20px;
+    border-radius: 10px;
+}
+#container #search .userLoginDiv .dropdown #dropdownMenuUl li {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+#container #search .userLoginDiv .dropdown #dropdownMenuUl li a {
+    text-decoration: none;
+}
+
 #container #search  .userLoginDiv li{
     float: left;
     margin-right: 10px;
@@ -63,6 +77,21 @@ body,ul{
 }
 #container #search  .userLoginDiv li a:hover{
     text-decoration: underline;
+}
+
+/*用户登录成功后的样式*/
+#container #search #userOperatorDiv {
+    cursor: pointer !important;
+}
+
+#container #search #userOperatorDiv a {
+    text-decoration: none;
+    color: #435764;
+}
+
+#container #search #userOperatorDiv a:hover {
+    text-decoration: underline;
+    color: #435764;
 }
 #container #menu{
     height: 40px;

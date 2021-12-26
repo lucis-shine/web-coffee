@@ -7,8 +7,11 @@
     <title>主页</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/bootstrap/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/base.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/common.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/before/index.js"></script>
+
 </head>
 <body>
 <div id="container">
