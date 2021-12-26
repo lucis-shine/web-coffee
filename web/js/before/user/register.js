@@ -1,10 +1,8 @@
 $(document).ready(function() {
 	// 用户名是否被注册
 	jQuery.validator.addMethod("isRegister", function(value, element) {
-		console.log('aaaaaa');
 		var isRegi = false;
 		if(''!=value){
-			console.log('bbbbb');
 			var user=new Object();
 			user.m='isRegister';
 			user.username=value;
@@ -64,7 +62,6 @@ $(document).ready(function() {
 	$("#register-form").validate({
 		errorElement : 'span',
 		errorClass : 'help-block',
-
 		rules : {
 			username : {
 				required : true,

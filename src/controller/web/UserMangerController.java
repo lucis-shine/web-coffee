@@ -19,10 +19,26 @@ public class UserMangerController extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String method="";//调用方法名称
         method=req.getParameter("m");
+        System.out.println("方法："+method);
         if ("register".equals(method)){
             register(req,resp);
         }else if("login".equals(method)){
             login(req,resp);
+        }
+        else if("isRegister".equals(method)){
+            isRegisterExistUsername(req,resp);
+        }
+    }
+    //验证用户名是否相同
+    private void isRegisterExistUsername(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException{
+        String username = request.getParameter("username");
+        System.out.println("用户名"+username);
+        boolean b  = userMangerService.isExistSameUsername(username);
+        if(b) {
+            response.getWriter().write("true");
+        }else {
+            response.getWriter().write("false");
         }
     }
     //用户注册方法

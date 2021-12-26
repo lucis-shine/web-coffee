@@ -22,4 +22,9 @@ public class UserMangerService implements IUserMangerService {
         UserPOJO userPOJO=new UserPOJO(username,password,name,sex,email,phone,birthday,picture,address);
         return userDao.insert(userPOJO);
     }
+
+    @Override
+    public boolean isExistSameUsername(String username) {
+        return userDao.selectExistSameUsername(username);
+    }
 }

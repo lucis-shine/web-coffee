@@ -67,4 +67,22 @@ public class UserDao implements IUserDao{
         }
         return false;
     }
+
+    @Override
+    public boolean selectExistSameUsername(String username) {
+        Connection connection = DataSourceUtil.getConnection();
+        PreparedStatement ps = null;
+        try {
+            String sql="select * from user where username=?";
+            ps = connection.prepareStatement(sql);
+            ps.setString(1, username);
+            ResultSet set = ps.executeQuery();
+            if(set.next()) {
+                return true;
+            }
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

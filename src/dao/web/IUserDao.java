@@ -10,4 +10,6 @@ public interface IUserDao {
     boolean updatePassword(Integer userId, String newPassword);
     //会员注册
     boolean insert(UserPOJO userPOJO);
+    //是否有相同用户名
+    boolean selectExistSameUsername(String username);
 }
