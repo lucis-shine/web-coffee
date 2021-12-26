@@ -13,8 +13,8 @@
 <body>
 <div id="menu">
     <ul class="menuUl">
-        <li><a href="">首页</a></li>
-        <li><a href="">咖啡咨询</a></li>
+        <li><a href="${pageContext.request.contextPath}/before/browseIndex?m=index">首页</a></li>
+        <li><a href="${pageContext.request.contextPath}/before/coffeeNews?m=list">咖啡咨询</a></li>
     </ul>
 </div>
 </body>

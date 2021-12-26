@@ -122,9 +122,8 @@
 				</div>
 			</div>
 		</form>
-			
 	</div>
+	<jsp:include page="/common/before/footer.jsp"></jsp:include>
 </div>
-	
 </body>
 </html>

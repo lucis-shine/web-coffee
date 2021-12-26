@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/bootstrap/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/base.css">
-<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/user/login.css">
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/coffeeNews/detail.css">
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/common.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jQuery.validate/jquery.validate.js"></script>
@@ -19,34 +19,38 @@
 	<jsp:include page="/common/before/header.jsp"></jsp:include>
 	<jsp:include page="/common/before/menu.jsp"></jsp:include>
 	<div id="content">
-		<form id="login-form" role="form" class="form-horizontal" method="get">
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="username">用户名：</label>
-				<div class="col-sm-5">
-					<input class="form-control" id="username" name="username" placeholder="请输入用户名"/>
-				</div>
+		<div class="container">
+		<div class="row">
+		    <div class="col-md-12 column">
+		        <div class="show_page">
+				    <div class="col-md-2"></div>
+				    <div class="col-md-8">
+				        <div class="page-header text-center">
+				            <h4>
+				                ${coffeeNewsVO.title }
+				            </h4>
+				            <p><span style="color: gray;">${coffeeNewsVO.addtime }</span></p>
+				        </div>
+				        <div class="page-header">
+				            <div class="text-center detail_pic">
+				                <img src="${pageContext.request.contextPath}/image/before/${coffeeNewsVO.picture }" style="width: 300px;height: 200px">
+				            </div>
+				            <div class="page-header">
+				            <h4 class="boxbg">主要内容</h4>
+				            </div>
+				            <div style="margin-top: 20px;line-height: 26px;text-indent: 2em;">${coffeeNewsVO.content }
+				            </div>
+				        </div>
+				        <div class="text-center"></div>
+				    </div>
+				    <div class="col-md-2"></div>
+			   </div>
 			</div>
-			<div class="form-group">
-				<label class="col-sm-2 control-label" for="password">密码：</label>
-				<div class="col-sm-5">
-					<input class="form-control" id="password" name="password" type="password"  placeholder="请输入密码"/>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-sm-5" style="text-align: right;">
-					<span id="resultInfo"></span>
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-md-offset-2 col-md-10">
-					<button type="submit" class="btn btn-primary btn-sm" style="margin-left:80px;">登录</button>
-					<button type="reset" class="btn btn-primary btn-sm" style="margin-left: 50px;">重置</button>
-				</div>
-			</div>
-		</form>
-			
+		</div>
+		</div>
 	</div>
 	<jsp:include page="/common/before/footer.jsp"></jsp:include>
 </div>
+
 </body>
 </html>

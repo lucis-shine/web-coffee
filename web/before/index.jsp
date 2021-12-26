@@ -18,11 +18,11 @@
     <jsp:include page="/common/before/header.jsp"></jsp:include>
   <div id="menu">
       <ul class="menuUl">
-          <li><a href="">首页</a></li>
+          <li><a href="${pageContext.request.contextPath}/before/browseIndex?m=index">首页</a></li>
           <jstl-c:forEach items="${coffeeTypeList}" var="type">
               <li><a href="">${type.name}</a></li>
           </jstl-c:forEach>
-          <li><a href="">咖啡咨询</a></li>
+          <li><a href="${pageContext.request.contextPath}/before/coffeeNews?m=list">咖啡咨询</a></li>
       </ul>
   </div>
   <div id="show">
@@ -47,16 +47,14 @@
         <div class="newsContent">
             <jstl-c:forEach items="${coffeeNewsList}" var="news">
                 <div class="title">
-                    <a href="">${news.title}</a>
+                    <a href="${pageContext.request.contextPath}/before/coffeeNews?m=detail&id=${news.id}">${news.title}</a>
                 </div>
                 <div class="time">
                         ${news.addtime}
                 </div>
             </jstl-c:forEach>
-
-
+        </div>
     </div>
-  </div>
     <jsp:include page="/common/before/footer.jsp"></jsp:include>
 </div>
 </body>

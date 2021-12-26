@@ -1,0 +1,39 @@
+#container #menu .menuUl li{
+	margin-left: 400px;
+}
+#container #content #coffeeNews{
+	width: 80%;
+	background-color: white;
+	margin: auto;
+}
+
+#container #content #coffeeNews .newsContent{
+	width:100%;
+	height: 70px;
+	background-color: white;
+	border-bottom: 1px dashed #aaaaaa;
+}
+#container #content #coffeeNews .newsContent div{
+	height: 35px;
+	line-height: 35px;
+	padding: 0px 5px 0px 5px;
+}
+#container #content #coffeeNews .newsContent .time{
+	text-align: right;
+	font-size: 14px;
+	color: #B8BFD1;
+}
+#container #content #coffeeNews .newsContent .title a{
+	text-decoration: none;
+    color: #5F5A51;
+    font-size: 14px;
+    display:inline-block;
+    width:100%;
+    text-overflow :ellipsis;; /*让截断的文字显示为点点 ellipsis。还有一个值是clip意截断不显示点点*/
+	white-space :nowrap; /*让文字不换行*/
+	overflow : hidden; /*超出要隐藏*/
+}
+
+#container #content #coffeeNews .pageContent{
+	text-align: center;
+}

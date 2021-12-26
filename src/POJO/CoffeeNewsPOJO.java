@@ -20,6 +20,14 @@ public class CoffeeNewsPOJO {
         this.isDelete = isDelete;
     }
 
+    public CoffeeNewsPOJO(Integer id, String picture, String title, String content, String addtime) {
+        this.id = id;
+        this.picture = picture;
+        this.title = title;
+        this.content = content;
+        this.addtime = addtime;
+    }
+
     public Integer getId() {
         return id;
     }

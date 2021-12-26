@@ -185,7 +185,7 @@ body,ul{
 
 #container #content #news .newsContent .time{
     text-align: right;
-    font-size: 14px;
+    font-size: 13px;
     color:#b8bfd1 ;
 }
 #container #content #news .newsContent .title a{
@@ -193,7 +193,7 @@ body,ul{
     color: #5f5a51;
     display: inline-block;
     width: 100%;
-    font-size: 14px;
+    font-size: 13px;
     text-overflow: ellipsis;/*文字显示。。。，另一个截断不显示。。。。。*/
     white-space: nowrap;/*文字不换行*/
     overflow: hidden;/*超出隐藏*/

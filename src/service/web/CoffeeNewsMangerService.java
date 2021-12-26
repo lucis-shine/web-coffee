@@ -14,6 +14,6 @@ public class CoffeeNewsMangerService implements ICoffeeNewsMangerService {
     ICoffeeNewsDao coffeeNewsDao=new CoffeeNewsDao();
     @Override
     public List<CoffeeNewsVO> coffeeNewsList() {
-        return coffeeNewsDao.selectcoffeeNewsList();
+        return coffeeNewsDao.selectCoffeeNewsList();
     }
 }

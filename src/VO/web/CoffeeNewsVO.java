@@ -9,4 +9,8 @@ public class CoffeeNewsVO extends CoffeeNewsPOJO {
     public CoffeeNewsVO(Integer id, String picture, String title, String content, String addtime, String isDelete) {
         super(id, picture, title, content, addtime, isDelete);
     }
+
+    public CoffeeNewsVO(Integer id, String picture, String title, String content, String addtime) {
+        super(id, picture, title, content, addtime);
+    }
 }
