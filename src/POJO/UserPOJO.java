@@ -119,4 +119,20 @@ public class UserPOJO {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "UserPOJO{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", picture='" + picture + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }

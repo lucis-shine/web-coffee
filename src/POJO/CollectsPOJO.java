@@ -33,5 +33,13 @@ public class CollectsPOJO {
 	public void setUserid(int userid) {
 		this.userid = userid;
 	}
-    
+
+	@Override
+	public String toString() {
+		return "CollectsPOJO{" +
+				"id=" + id +
+				", coffeeid=" + coffeeid +
+				", userid=" + userid +
+				'}';
+	}
 }

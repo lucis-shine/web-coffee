@@ -50,6 +50,15 @@ public class CommentsPOJO {
 	public void setAddtime(String addtime) {
 		this.addtime = addtime;
 	}
-	
 
+	@Override
+	public String toString() {
+		return "CommentsPOJO{" +
+				"id=" + id +
+				", userid=" + userid +
+				", coffeeid=" + coffeeid +
+				", content='" + content + '\'' +
+				", addtime='" + addtime + '\'' +
+				'}';
+	}
 }
