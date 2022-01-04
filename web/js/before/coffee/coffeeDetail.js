@@ -43,8 +43,6 @@ function addOrRemoveCollects(){
 	});
 }
 
-
-
 function addComments(coffeeid){
 	var content = $("#commentsContent").val();
 	alert("coffeeid="+coffeeid);
