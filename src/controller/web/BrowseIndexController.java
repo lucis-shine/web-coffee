@@ -18,7 +18,7 @@ import java.util.List;
 public class BrowseIndexController extends HttpServlet {
     ICoffeeTypeMangerService coffeeTypeMangerService=new CoffeeTypeMangerService();
     ICoffeeMangerService coffeeMangerService=new CoffeeMangerService();
-    ICoffeeNewsMangerService coffeeNewsMangerService=new CoffeeNewsMangerService();
+    ICoffeeNewsManagerService coffeeNewsMangerService=new CoffeeNewsManagerService();
     String method="";//调用方法名称
     IUserMangerService userMangerService=new UserMangerService();
     @Override
@@ -45,7 +45,7 @@ public class BrowseIndexController extends HttpServlet {
         List<CoffeeVO> coffeeList= coffeeMangerService.getCoffeeList();
         System.out.println(coffeeList);
         //获得咖啡新闻信息
-        List<CoffeeNewsVO> coffeeNewsList= coffeeNewsMangerService.coffeeNewsList();
+        List<CoffeeNewsVO> coffeeNewsList= coffeeNewsMangerService.getCoffeeNewsList();
         System.out.println(coffeeNewsList);
 
         //数据绑定

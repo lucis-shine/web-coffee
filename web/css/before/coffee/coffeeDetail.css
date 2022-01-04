@@ -1,0 +1,146 @@
+
+#container #menu .menuUl li{
+	margin-left: 400px;
+}
+
+.main_center .colb_css .divl_css{
+	width:50%;
+	float: left;
+}
+
+.main_center {
+    padding-bottom: 100px;
+    padding-top: 30px;
+}
+.main_center .colb_css{
+	height: 375px;
+	overflow: hidden;
+}
+.main_center .colb_css .divl_css .img-rounded{
+	width:100%;
+}
+
+.main_center .colb_css .divr_css {
+    float: left;
+    width: 50%;
+    padding-left: 35px;
+}
+.main_center .colb_css .divr_css h4 {
+    color: #435764;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.p1_css .glyphicon {
+    font-size: 18px;
+    line-height: 20px;
+    color: #C52D04;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+.input_text {
+    font-size: 12px;
+    height: 34px;
+    width: 34px;
+    border: 1px solid #b4c5cd;
+    text-align: center;
+    border-radius: 4px;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn1_css {
+    color: #fff;
+    background-color: #6495AA;
+    border-color: #6495AA;
+}
+.sc_css {
+    color: #6495AA;
+    background-color: #fff;
+    border-color: #6495AA;
+    width: 34px;
+    padding: 5px 0px !important;
+    font-size: 16px;
+    height: 34px;
+}
+.sc_css span{
+	margin-top: 4px;
+}
+
+.sc_css:hover {
+	background-color: #6495AA;
+	color: red;
+}
+
+.sc_css_active {
+    color: red;
+    border-color: #6495AA;
+    width: 34px;
+    padding: 5px 0px !important;
+    font-size: 16px;
+    height: 34px;
+}
+.sc_css_active span{
+	margin-top: 4px;
+}
+.sc_css_active:hover{
+	color: #6495AA;
+}
+
+
+
+.comment_div, .delivery_css {
+    overflow: hidden;
+    border-radius: 5px;
+    background: #f1f3f2;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+h4, .h4 {
+    font-size: 18px;
+}
+
+.more_css {
+    padding: 10px;
+    color: #435764;
+    font-size: 13px;
+}
+
+.page-header {
+    margin: 0px 0 20px 0;
+    overflow: hidden;
+}
+
+.btn3_css {
+    border-color: #435764;
+    color: #435764 !important;
+    background-color: white;
+    padding: 2px 10px;
+    float: right;
+}
+
+.btn3_css:hover {
+	background-color: #435764;
+	color: white!important;
+}

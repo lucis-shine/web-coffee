@@ -1,0 +1,13 @@
+
+#container #menu .menuUl li{
+	margin-left: 400px;
+}
+
+#content .thumbnail{
+    display: block;
+    text-decoration: none;
+    border: 1px solid white;
+}
+#content .thumbnail:hover{
+    border: 1px solid #E7E7E7;
+}

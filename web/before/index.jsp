@@ -20,7 +20,7 @@
       <ul class="menuUl">
           <li><a href="${pageContext.request.contextPath}/before/browseIndex?m=index">首页</a></li>
           <jstl-c:forEach items="${coffeeTypeList}" var="type">
-              <li><a href="">${type.name}</a></li>
+              <li><a href="${pageContext.request.contextPath}/before/coffee?m=coffeeListByType&typeId=${type.id}">${type.name}</a></li>
           </jstl-c:forEach>
           <li><a href="${pageContext.request.contextPath}/before/coffeeNews?m=list">咖啡咨询</a></li>
       </ul>
@@ -34,9 +34,11 @@
         <div id="goodsList">
             <jstl-c:forEach items="${coffeeList}" var="coffee">
                 <div class="goods">
-                    <img src="${pageContext.request.contextPath}/image/before/${coffee.picture}" alt="">
-                    <span class="goodsName">${coffee.name}</span>
-                    <span class="goodsPrice">${coffee.price}</span>
+                    <a href="${pageContext.request.contextPath}/before/coffee?m=detail&id=${coffee.id}">
+                     <img src="${pageContext.request.contextPath}/image/before/${coffee.picture}" alt="">
+                     <span class="goodsName">${coffee.name}</span>
+                     <span class="goodsPrice">${coffee.price}</span>
+                    </a>
                 </div>
             </jstl-c:forEach>
         </div>

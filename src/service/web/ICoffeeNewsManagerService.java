@@ -10,5 +10,4 @@ import java.util.List;
 public interface ICoffeeNewsManagerService {
 	List<CoffeeNewsVO> getCoffeeNewsList();
 	CoffeeNewsVO getCoffeeNewsById(String id);
-
 }
