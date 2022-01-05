@@ -16,7 +16,7 @@ public class UserDao implements IUserDao{
         Connection conn= DataSourceUtil.getConnection();
         PreparedStatement preparedStatement=null;
         try{
-            String sql="select id,username,password,name,sex,email,phone,birthday,picture,address from user " +
+            String sql="select id,username,password,name,sex,email,phone,birthday,picture,address ,money from user " +
                     "where username=? and password=?";
             preparedStatement=conn.prepareStatement(sql);
             preparedStatement.setString(1,username);
@@ -28,7 +28,7 @@ public class UserDao implements IUserDao{
                         set.getString("name"),   set.getString("sex"),
                         set.getString("email"),   set.getString("phone"),
                         set.getString("birthday"),   set.getString("picture"),
-                        set.getString("address"));
+                        set.getString("address"),set.getDouble("money"));
             }
         } catch (Exception e){
             e.printStackTrace();
@@ -46,8 +46,8 @@ public class UserDao implements IUserDao{
         Connection conn= DataSourceUtil.getConnection();
         PreparedStatement preparedStatement=null;
         try{
-            String sql="insert into user(username,password,name,sex,email,phone,birthday,picture,address)"+
-                    "values(?,?,?,?,?,?,?,?,?)";
+            String sql="insert into user(username,password,name,sex,email,phone,birthday,picture,address,money)"+
+                    "values(?,?,?,?,?,?,?,?,?,?)";
             preparedStatement=conn.prepareStatement(sql);
             preparedStatement.setString(1,userPOJO.getUsername());
             preparedStatement.setString(2,userPOJO.getPassword());
@@ -58,6 +58,7 @@ public class UserDao implements IUserDao{
             preparedStatement.setString(7,userPOJO.getBirthday());
             preparedStatement.setString(8,userPOJO.getPicture());
             preparedStatement.setString(9,userPOJO.getAddress());
+            preparedStatement.setDouble(10,userPOJO.getMoney());
             int row=preparedStatement.executeUpdate();
             if (row>0){
                 return true;

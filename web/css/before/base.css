@@ -176,13 +176,15 @@ body,ul{
     margin-top: 5px;
 }
 #container #content #news{
-    width:30% ;
+    width: 30%;
+    background-color: white;
     height: 300px;
     float: right;
 }
 #container #content #news .newsContent{
-    width:100% ;
+    width: 100%;
     height: 70px;
+    background-color: white;
     border-bottom: 1px dashed #aaaaaa;
 }
 
@@ -190,6 +192,7 @@ body,ul{
     height: 35px;
     line-height: 35px;
     padding:0px 5px 0px 5px ;
+
 }
 
 #container #content #news .newsContent .time{

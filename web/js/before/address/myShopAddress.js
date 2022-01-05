@@ -23,7 +23,7 @@ function submitCart(){
             if('true'==$.trim(result)){
             	location.href=path+'/filter/before/orders?m=list';//跳转到查看订单列表页面
             }else{
-            	$("#resultInfo").text("修改失败");
+            	$("#resultInfo").text("提交失败");
             	$("#resultInfo").css("color","red");
             }
         },

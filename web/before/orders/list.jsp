@@ -5,14 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>购物地址页</title>
+<title>订单列表页</title>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/bootstrap/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/base.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/collects/list.css">
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/common.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/before/address/myShopAddress.js"></script>
 </head>
 <body>
 <div id="container">
@@ -25,37 +24,38 @@
                      <div class="page-header" style="margin: 0px 0 20px;">
 						    <table class="table table-striped" style="text-align: center;">
 				               <tr>
-				                   <th>选择</th>
-				                   <th>联系人</th>
-				                   <th>收货地址</th>
+				                   <th>地址</th>
 				                   <th>联系电话</th>
+				                   <th>联系人</th>
+				                   <th>状态</th>
+				                   <th>操作</th>
 				               </tr>
-				               <c:forEach items="${addressList}" var="address">
+				               <c:forEach items="${ordersList }" var="orders">
 					              <tr>
-					                    <td style="vertical-align: middle" class="coffName">
-					                       <c:if test="${address.def eq '是' }">
-					         				  <input type="radio" name="def" checked="checked" value="${address.id}">					                       
-					                       </c:if>
-					                       <c:if test="${address.def eq '否' }">
-					         				  <input type="radio" name="def" value="${address.id}">					                       
-					                       </c:if>
+					         			<td style="vertical-align: middle" class="coffName">
+					         				${orders.addressName}
 					         			</td>
 					         			<td style="vertical-align: middle" class="coffName">
-					         				${address.linkman}
+					         				${orders.phone}
 					         			</td>
 					         			<td style="vertical-align: middle" class="coffName">
-					         				${address.addressname}
+					         				${orders.linkman}
 					         			</td>
 					         			<td style="vertical-align: middle" class="coffName">
-					         				${address.phone}
+					         				${orders.status}
 					         			</td>
+					         			
+					         			<td style="vertical-align: middle" class="coffName">
+					         				<a  class="btn btn-default"
+					         				href="${pageContext.request.contextPath}/filter/before/orders?m=get&&id=${orders.id}">	
+					         				详情
+					         				</a>
+					         			</td>
+					                   
 					               </tr>
+				               
 				               </c:forEach>
-				              	   <tr>
-				                   		<td style="vertical-align: middle;text-align: right" colspan="4">
-											<a href="javascript:submitCart()" class="btn btn-danger">提交订单</a>
-										</td>
-				                   </tr>
+				              
 				       		</table>
 				        </div>
 			        </div>

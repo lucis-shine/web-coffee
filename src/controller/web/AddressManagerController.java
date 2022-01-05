@@ -51,6 +51,7 @@ public class AddressManagerController extends HttpServlet {
 		//response.sendRedirect("/eshop_web/before/address/list.jsp");//重定向
 		request.getRequestDispatcher("/before/address/myShopAddress.jsp").forward(request, response);//转发
 	}
+
 	private void update(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
@@ -64,6 +65,7 @@ public class AddressManagerController extends HttpServlet {
 			response.getWriter().write("false");
 		}
 	}
+
 	private void getAddressById(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
@@ -71,6 +73,7 @@ public class AddressManagerController extends HttpServlet {
 		request.setAttribute("addressVO", addressVO);
 		request.getRequestDispatcher("/before/address/update.jsp").forward(request, response);
 	}
+
 	private void delete(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		String id = request.getParameter("id");
@@ -79,6 +82,7 @@ public class AddressManagerController extends HttpServlet {
 			request.getRequestDispatcher("/filter/before/address?m=list").forward(request, response);//转发
 		}
 	}
+
 	private void list(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		//查询数据库中是否存在商品信息  根据用户的id

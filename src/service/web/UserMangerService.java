@@ -18,8 +18,9 @@ public class UserMangerService implements IUserMangerService {
     }
 
     @Override
-    public boolean register(String username, String password, String name, String sex, String email, String phone, String birthday, String picture, String address) {
-        UserPOJO userPOJO=new UserPOJO(username,password,name,sex,email,phone,birthday,picture,address);
+    public boolean register(String username, String password, String name, String sex, String email, String phone, String birthday, String picture, String address,String money) {
+        double doubleMoney= Double.parseDouble(money);
+        UserPOJO userPOJO=new UserPOJO(username,password,name,sex,email,phone,birthday,picture,address,doubleMoney);
         return userDao.insert(userPOJO);
     }
 

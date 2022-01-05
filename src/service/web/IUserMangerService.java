@@ -7,7 +7,7 @@ public interface IUserMangerService {
     UserLoginVO login(String username, String password);
     boolean updatePassword(Integer userId, String newPassword);
     //注册
-    boolean register(String username, String password, String name, String sex, String email, String phone, String birthday, String picture, String address);
+    boolean register(String username, String password, String name, String sex, String email, String phone, String birthday, String picture, String address,String money);
     //检查用户名是否相同
     boolean isExistSameUsername(String username);
 }

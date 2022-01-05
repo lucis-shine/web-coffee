@@ -63,7 +63,8 @@ public class UserMangerController extends HttpServlet {
         String birthday=req.getParameter("birthday");
         String picture=req.getParameter("picture");
         String address=req.getParameter("address");
-        boolean b=userMangerService.register(username,password,name,sex,email,phone,birthday,picture,address);
+        String money=req.getParameter("money");
+        boolean b=userMangerService.register(username,password,name,sex,email,phone,birthday,picture,address,money);
         if (b){
             resp.getWriter().write("true");
         }

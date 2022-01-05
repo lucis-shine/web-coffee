@@ -11,6 +11,7 @@ public class UserPOJO {
     private String birthday;
     private String picture;
     private String address;
+    private double money;
 
     public UserPOJO() {
     }
@@ -38,6 +39,40 @@ public class UserPOJO {
         this.birthday = birthday;
         this.picture = picture;
         this.address = address;
+    }
+
+    public double getMoney() {
+        return money;
+    }
+
+    public void setMoney(double money) {
+        this.money = money;
+    }
+
+    public UserPOJO(Integer id, String username, String password, String name, String sex, String email, String phone, String birthday, String picture, String address, double money) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.sex = sex;
+        this.email = email;
+        this.phone = phone;
+        this.birthday = birthday;
+        this.picture = picture;
+        this.address = address;
+        this.money = money;
+    }
+    public UserPOJO( String username, String password, String name, String sex, String email, String phone, String birthday, String picture, String address, double money) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.sex = sex;
+        this.email = email;
+        this.phone = phone;
+        this.birthday = birthday;
+        this.picture = picture;
+        this.address = address;
+        this.money = money;
     }
 
     public Integer getId() {
@@ -133,6 +168,7 @@ public class UserPOJO {
                 ", birthday='" + birthday + '\'' +
                 ", picture='" + picture + '\'' +
                 ", address='" + address + '\'' +
+                ", money=" + money +
                 '}';
     }
 }

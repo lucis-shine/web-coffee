@@ -1,0 +1,32 @@
+
+#container #menu .menuUl li{
+	margin-left: 400px;
+}
+table {
+	width: 100%;
+}
+table th{
+	text-align:  center;
+}
+
+table .coffImg{
+	width: 20%;
+}
+table .coffImg img{
+	width: 30%;
+	height: 30%;
+}
+table a{
+	text-decoration: none;
+	color: #333;
+}
+table a:hover {
+	color: red;
+}
+
+#orderInfo .tr_left{
+	text-align: right;
+}
+#orderInfo tr{
+	text-align: left;
+}
