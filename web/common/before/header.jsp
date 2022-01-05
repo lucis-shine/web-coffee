@@ -35,7 +35,7 @@
                     <li><a href="${pageContext.request.contextPath }/before/address/add.jsp">添加地址</a> </li>
                     <li><a href="${pageContext.request.contextPath }/filter/before/address?m=list">我的地址</a> </li>
                     <li><a href="${pageContext.request.contextPath }/filter/before/collects?m=list">我的收藏</a> </li>
-                    <li><a href="${pageContext.request.contextPath }//before/user?m=exit">退出</a> </li>
+                    <li><a href="${pageContext.request.contextPath }/before/user?m=exit">退出</a> </li>
                 </ul>
             </li>
         </ul>

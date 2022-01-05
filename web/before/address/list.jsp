@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>收藏页</title>
+<title>地址列表页</title>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/bootstrap/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/base.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/collects/list.css">
@@ -24,26 +24,32 @@
                      <div class="page-header" style="margin: 0px 0 20px;">
 						    <table class="table table-striped" style="text-align: center;">
 				               <tr>
-				                   <th>咖啡</th>
-				                   <th>咖啡名称</th>
+				                   <th>联系人</th>
+				                   <th>收货地址</th>
+				                   <th>联系电话</th>
 				                   <th>操作</th>
 				               </tr>
-				               <c:forEach items="${collectsList}" var="collects">
+				               <c:forEach items="${addressList }" var="address">
 					              <tr>
-					                    <td style="vertical-align: middle" class="coffImg">
-					                        <a href="${pageContext.request.contextPath}/before/coffee?m=detail&&id=${collects.coffeeid}">				                        
-					                    		<img alt="" src="${pageContext.request.contextPath}/image/before/${collects.picture}">
-					                        </a>
-					                    </td>
 					         			<td style="vertical-align: middle" class="coffName">
-					         				<a href="${pageContext.request.contextPath}/before/coffee?m=detail&&id=${collects.coffeeid}">	
-					         				${collects.coffeeName}
-					         				</a>
+					         				${address.linkman}
+					         			</td>
+					         			<td style="vertical-align: middle" class="coffName">
+					         				${address.addressname}
+					         			</td>
+					         			<td style="vertical-align: middle" class="coffName">
+					         				${address.phone}
 					         			</td>
 					         			
-					                    <td style="vertical-align: middle" class="operator">
-					                       <a href="${pageContext.request.contextPath}/filter/before/collects?m=remove&collectsid=${collects.id}" onClick="return confirm('确定删除?');" class="btn btn-default">删&nbsp;&nbsp;除</a> 
-					                    </td>
+					         			<td style="vertical-align: middle" class="coffName">
+					         				<a href="${pageContext.request.contextPath}/filter/before/address?m=get&&id=${address.id}">	
+					         				修改
+					         				</a>
+					         				<a href="${pageContext.request.contextPath}/filter/before/address?m=delete&&id=${address.id}">	
+					         				删除
+					         				</a>
+					         			</td>
+					                   
 					               </tr>
 				               
 				               </c:forEach>

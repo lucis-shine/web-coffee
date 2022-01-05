@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>咖啡列表页</title>
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/bootstrap/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/base.css">
 <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/before/coffee/coffeeListByType.css">

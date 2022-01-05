@@ -27,8 +27,19 @@ public class UserMangerController extends HttpServlet {
         }
         else if("isRegister".equals(method)){
             isRegisterExistUsername(req,resp);
+        } else if("exit".equals(method)){
+            userExit(req,resp);
         }
     }
+    //用户退出
+    private void userExit(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        HttpSession session=req.getSession();
+        //清空所有session
+        session.invalidate();
+        req.getRequestDispatcher("browseIndex?m=index").forward(req,resp);
+    }
+
     //验证用户名是否相同
     private void isRegisterExistUsername(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{
